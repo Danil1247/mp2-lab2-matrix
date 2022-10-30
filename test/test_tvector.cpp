@@ -50,7 +50,7 @@ TEST(TDynamicVector, can_get_size)
 {
   TDynamicVector<int> v(4);
 
-  EXPECT_EQ(4, v.size());
+  EXPECT_EQ(4, v.Size());
 }
 
 //TEST(TDynamicVector, can_set_and_get_element)
@@ -99,9 +99,9 @@ TEST(TDynamicVector, assign_operator_change_vector_size)
 {
   TDynamicVector<int>t1(3);
   TDynamicVector<int>t2(5);
-  int size = t1.size();
+  int size = t1.Size();
   t1 = t2;
-  int new_size = t1.size();
+  int new_size = t1.Size();
   EXPECT_NE(size, new_size);
 }
 
@@ -112,7 +112,7 @@ TEST(TDynamicVector, can_assign_vectors_of_different_size)
     v1[i] = i + 1;
   TDynamicVector<int>v2(3);
   v2 = v1;
-  for (int i = 0; i < v1.size(); i++)
+  for (int i = 0; i < v1.Size(); i++)
     EXPECT_EQ(v1[i], v2[i]);
 }
 
